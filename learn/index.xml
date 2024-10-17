@@ -108,7 +108,8 @@
     &lt;/span&gt;        
     
 &lt;/h2&gt;
-&lt;p&gt;此为研究生课程模式识别的第一次作业，求多元正态分布下关于(\boldsymbol{\mu},\boldsymbol{\Sigma})的极大似然估计值。本文用于记录相关公式及推导过程，内容涉及极大似然估计、矩阵求导等。&lt;/p&gt;</description>
+&lt;p&gt;% KaTeX inline notation
+Inline notation: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)&lt;/p&gt;</description>
       
     </item>
     
