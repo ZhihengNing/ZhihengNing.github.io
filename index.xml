@@ -118,8 +118,9 @@
     &lt;/span&gt;        
     
 &lt;/h2&gt;
-&lt;p&gt;% KaTeX inline notation
-Inline notation: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)&lt;/p&gt;</description>
+&lt;p&gt;
+
+\(f(a,b,c) = (a^2+b^2+c^2)^3\)&lt;/p&gt;</description>
       
     </item>
     
