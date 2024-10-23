@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>关于自己 on Yuki</title>
+    <link>http://localhost:1313/myself/</link>
+    <description>Recent content in 关于自己 on Yuki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 Yuki</copyright>
+    <lastBuildDate>Sat, 12 Oct 2024 19:04:09 +0800</lastBuildDate><atom:link href="http://localhost:1313/myself/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>个人博客初衷</title>
+      <link>http://localhost:1313/myself/blog_reason/</link>
+      <pubDate>Sat, 12 Oct 2024 19:04:09 +0800</pubDate>
+      
+      <guid>http://localhost:1313/myself/blog_reason/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/myself/blog_reason/featured1.jpg" />
+    </item>
+    
+  </channel>
+</rss>

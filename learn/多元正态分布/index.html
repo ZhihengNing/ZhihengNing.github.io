@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>公式渲染 &middot; Yuki</title>
-  <meta name="title" content="公式渲染 &middot; Yuki" />
+  <title>多元正态分布详解 &middot; Yuki</title>
+  <meta name="title" content="多元正态分布详解 &middot; Yuki" />
   
   <meta name="description" content="一个强大、轻量级的 Hugo 主题。" />
   
   
   
-  <link rel="canonical" href="http://localhost:1313/learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/" />
+  <link rel="canonical" href="http://localhost:1313/learn/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/" />
   
   
   
@@ -63,19 +63,21 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/">
+  <meta property="og:url" content="http://localhost:1313/learn/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/">
   <meta property="og:site_name" content="Yuki">
-  <meta property="og:title" content="公式渲染">
+  <meta property="og:title" content="多元正态分布详解">
   <meta property="og:description" content="一个强大、轻量级的 Hugo 主题。">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="learn">
-    <meta property="article:published_time" content="2023-10-17T13:06:09+08:00">
-    <meta property="article:modified_time" content="2023-10-17T13:06:09+08:00">
+    <meta property="article:published_time" content="2023-10-14T17:33:09+08:00">
+    <meta property="article:modified_time" content="2023-10-14T17:33:09+08:00">
+    <meta property="og:image" content="http://localhost:1313/learn/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/featured.jpg">
 
   
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="公式渲染">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/learn/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/featured.jpg">
+  <meta name="twitter:title" content="多元正态分布详解">
   <meta name="twitter:description" content="一个强大、轻量级的 Hugo 主题。">
 
   
@@ -84,26 +86,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "学习",
-    "name": "公式渲染",
-    "headline": "公式渲染",
+    "name": "多元正态分布详解",
+    "headline": "多元正态分布详解",
     
     
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/learn\/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93\/",
+    "url" : "http:\/\/localhost:1313\/learn\/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83\/",
     "author" : {
       "@type": "Person",
       "name": "Yuki"
     },
     "copyrightYear": "2023",
-    "dateCreated": "2023-10-17T13:06:09\u002b08:00",
-    "datePublished": "2023-10-17T13:06:09\u002b08:00",
+    "dateCreated": "2023-10-14T17:33:09\u002b08:00",
+    "datePublished": "2023-10-14T17:33:09\u002b08:00",
     
-    "dateModified": "2023-10-17T13:06:09\u002b08:00",
+    "dateModified": "2023-10-14T17:33:09\u002b08:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "39"
+    "wordCount": "197"
   }]
   </script>
 
@@ -635,7 +637,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      公式渲染
+      多元正态分布详解
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -680,7 +682,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-17T13:06:09&#43;08:00">2023-10-17</time><span class="px-2 text-primary-500">&middot;</span><span>39 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="2023-10-14T17:33:09&#43;08:00">2023-10-14</time><span class="px-2 text-primary-500">&middot;</span><span>197 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
   
 
   
@@ -805,56 +807,125 @@
 
 
 
-<h1 class="relative group">公式渲染 
-    <div id="%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93" class="anchor"></div>
+<h1 class="relative group">多元正态分布的极大似然估计 
+    <div id="%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1" aria-label="锚点">#</a>
     </span>        
     
 </h1>
-<p>按照blowfish文档输入以下表达式，本地启动无法正常显示</p>
-<p>\( \boldsymbol{x}<em>i \in \mathbb{R}^p, \boldsymbol{u} \in \mathbb{R}^p,\boldsymbol{\Sigma} \in \mathcal{S}</em>{+}^p \)</p>
-<p>对包含下标的表达式加上转义符号，本地运行可正常显示</p>
-<p>\( \boldsymbol{x}_i \in \mathbb{R}^p, \boldsymbol{u} \in \mathbb{R}^p,\boldsymbol{\Sigma} \in \mathcal{S}_{+}^p \)</p>
-<p>针对包含下标的表达式加上转义符号，github page无法正常显示</p>
-<p>\( \boldsymbol{x}_i \in \mathbb{R}^p, \boldsymbol{u} \in \mathbb{R}^p,\boldsymbol{\Sigma} \in \mathcal{S}_{+}^p \)</p>
-<p>以上三个公式本地运行渲染截图</p>
-<p>
-    <figure>
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004310698_hu4430031961994880112.png 330w,
-        /learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004310698_hu8338945998969802093.png 660w,
-        /learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004310698_hu394558626641563161.png 1024w,
-        /learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004310698_hu4023751968278362642.png 2x"
-        src="/learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004310698_hu8338945998969802093.png"
-        alt="image-20241023004310698"
-      />
-      
-    </figure>
-</p>
-<p>访问github page截图</p>
-<p>
-    <figure>
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004601685_hu13843740572810057144.png 330w,
-        /learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004601685_hu13808205623958525704.png 660w,
-        /learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004601685_hu15060954883422045479.png 1024w,
-        /learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004601685_hu13068875815850888772.png 2x"
-        src="/learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.assets/image-20241023004601685_hu13808205623958525704.png"
-        alt="image-20241023004601685"
-      />
-      
-    </figure>
-</p>
+
+
+<h2 class="relative group">前言 
+    <div id="%E5%89%8D%E8%A8%80" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%89%8D%E8%A8%80" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>此为研究生课程模式识别的第一次作业，求多元正态分布下关于\(\boldsymbol{\mu},\boldsymbol{\Sigma}\)的极大似然估计值。本文用于记录相关公式及推导过程，内容涉及极大似然估计、矩阵求导等。</p>
+
+
+<h2 class="relative group">正态分布 
+    <div id="%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>众所周知，正态分布的概率密度函数为\(f(x)=\frac{1}{\sqrt{2\pi \sigma^2}} \exp[-\frac{(x-\mu)^2}{2}]\)。令\(x_i \sim N(\mu,\sigma^2)\)，\(\mathcal{D}=\set{x_1,x_2,\cdots,x_n}\)，则极大似然函数为
+$$
+L(\mu,\sigma^2)=\prod_{i=1}^n f(x_i)=\frac{1}{(2\pi \sigma^2)^{\frac{n}{2}}}\exp [-\frac{1}{2} \sum_{i=1}^n (x_i-\mu)^2 ]
+$$
+对极大似然取对数，再求导并令\(\frac{\partial{\ln L(\mu,\sigma^2)}}{\partial \mu}=0,\frac{\partial{\ln L(\mu,\sigma^2)}}{\partial \sigma^2}=0\)，解得\(\hat{\mu}=\bar{x},\sigma^2=\frac{1}{n}\sum_{i=0}^n (x-\bar{x})^2=\frac{1}{n}\sum_{i=0}^n (x-\hat{\mu})^2\)</p>
+
+
+<h2 class="relative group">多元正态分布 
+    <div id="%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>假设\( \boldsymbol{x}_i \in \mathbb{R}^p, \boldsymbol{u} \in \mathbb{R}^p,\boldsymbol{\Sigma} \in \mathcal{S}_{+}^p \) ，</p>
+<p>且\(\boldsymbol{x}_i \sim \mathcal{N}_p(\boldsymbol{\mu},\boldsymbol{\Sigma})\)，令\(\mathcal{D}=\set{\boldsymbol{x}_1,\boldsymbol{x}_2,\cdots,\boldsymbol{x}_n}\)，则多元形式下的正态分布概率密度函数为：
+$$
+f(\boldsymbol{x})= \frac{1}{(2\pi)^\frac{p}{2} | \boldsymbol{\Sigma}|^\frac{1}{2}}
+\exp[{-\frac{1}{2}} (\boldsymbol{x-u})^T\boldsymbol{\Sigma}^{-1}(\boldsymbol{x-u})]
+$$
+对其取对数，并进行化简：
+$$
+\ln{L(\boldsymbol{u},\boldsymbol{\Sigma})}=-\frac{pn}{2}\ln(2\pi) -\frac{n}{2}\ln|\boldsymbol{\Sigma}|-\frac{1}{2}\sum_{i=1}^n {(\boldsymbol{x_i-u})^T\boldsymbol{\Sigma}^{-1}(\boldsymbol{x_i-u})}
+$$</p>
+
+
+<h2 class="relative group">矩阵求导公式 
+    <div id="%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC%E5%85%AC%E5%BC%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC%E5%85%AC%E5%BC%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>下面给出几个后续证明推导要用到的公式，由于不是本文重点，此处不对其进行证明</p>
+<p>$$
+\frac{\partial{\ln{|\boldsymbol{X}|}}}{\partial{\boldsymbol {X}}}=\boldsymbol{X^{-T}} \tag{1}
+$$</p>
+<p>$$
+\frac{\partial{\ln(\boldsymbol{\lambda^T X^{-1}\lambda})}}{\partial{\boldsymbol{X}}}=-(\boldsymbol{X^{-1} \lambda \lambda^T X^{-1}})^T \tag{2}
+$$</p>
+<p>$$
+\
+\frac{\partial{(\boldsymbol{\lambda-x})^T \boldsymbol{\Sigma^{-1}} (\boldsymbol{\lambda-x})}}{\partial{\boldsymbol{x}}}=[\boldsymbol{(\lambda-x)^T (\Sigma^{-T}+\Sigma^{-1})}]^T \tag{3}
+$$</p>
+<p>记\( \frac{\partial{f(\boldsymbol{X})}}{\partial{\boldsymbol{X}}}=\boldsymbol{A} \)，其中\(\boldsymbol{X} \in \mathbb{R}^{n \times n} ,f:\mathbb{R}^{n \times n} \rightarrow \mathbb{R}\)。因此对于\(\boldsymbol{X} \in S^n\)，有：
+$$
+\frac{\partial{f(\boldsymbol{X})}}{\partial{\boldsymbol{X}}}=\boldsymbol{A^T +A - A\circ E} \tag{4}
+$$
+其中\(\circ\)为Hadamard product。这表明了对称矩阵在求导过程中的特殊性。</p>
+<p>由于\(\boldsymbol{X} \in \mathcal{S}^n\)，则式\((1),(2)\)可转换为\((5),(6)\)：</p>
+<p>$$
+\frac{\partial{\ln{|\boldsymbol{X}|}}}{\partial{\boldsymbol {X}}}
+=\boldsymbol{X^{-1}}+\boldsymbol{X^{-T}}-\boldsymbol{X^{-T}}\circ \boldsymbol{E} \tag{5}
+$$</p>
+<p>$$
+\frac{\partial{\ln(\boldsymbol{\lambda^T X^{-1}\lambda})}}{\partial{\boldsymbol{X}}}
+=-(\boldsymbol{X^{-1} \lambda \lambda^T X^{-1}})
+-(\boldsymbol{X^{-1} \lambda \lambda^T X^{-1}})^T
++(\boldsymbol{X^{-1} \lambda \lambda^T X^{-1}})^T \circ \boldsymbol{E} \tag{6}
+$$</p>
+<p>由式\((3)\)可得：</p>
+<p>$$
+\frac{\partial{\ln{L(\boldsymbol{u},\boldsymbol{\Sigma})}}}{\partial{\boldsymbol{u}}}
+=-\frac{1}{2} \sum_{i=0}^n \frac{\partial{(\boldsymbol{x_i-u})^T\boldsymbol{\Sigma}^{-1}(\boldsymbol{x_i-u})}}{\partial{\boldsymbol{u}}} \
+=\sum_{i=1}^n \boldsymbol{\Sigma^{-1}(x_i-u)}
+=\boldsymbol{\Sigma^{-1} \sum_{i=1}^n (x_i-u)} \tag{7}
+$$</p>
+<p>由式\((5),(6)\)可得：</p>
+<p>$$
+\frac{\partial{\ln{L(\boldsymbol{u},\boldsymbol{\Sigma})}}}{\partial{\boldsymbol{\Sigma}}}
+=-\frac{n}{2} \frac{\partial{\ln|\boldsymbol{\Sigma}|}}{\partial{\boldsymbol{\Sigma}}}-\frac{1}{2} \sum_{i=0}^n \frac{\partial{(\boldsymbol{x_i-u})^T\boldsymbol{\Sigma}^{-1}(\boldsymbol{x_i-u})}}{\partial{\boldsymbol{\Sigma}}}
+=\frac{1}{2} [\boldsymbol{\sum_{i=0}^n (\Sigma^{-1}(x_i-u)(x_i-u)^T \Sigma^{-1}} -n\boldsymbol{\Sigma^{-1}})^T
++ \boldsymbol{\sum_{i=0}^n (\Sigma^{-1}(x_i-u)(x_i-u)^T \Sigma^{-1}} -n\boldsymbol{\Sigma^{-1}})
+-\boldsymbol{\sum_{i=0}^n (\Sigma^{-1}(x_i-u)(x_i-u)^T \Sigma^{-1}} -n \boldsymbol{\Sigma^{-1}) \circ E }]
+=\boldsymbol{\sum_{i=0}^n (\Sigma^{-1}(x_i-u)(x_i-u)^T \Sigma^{-1}} -n \boldsymbol{\Sigma^{-1})}
+-\frac{1}{2} \boldsymbol{\sum_{i=0}^n (\Sigma^{-1}(x_i-u)(x_i-u)^T \Sigma^{-1}} -n \boldsymbol{\Sigma^{-1}) \circ E } \tag{8}
+$$</p>
+<p>令式\((7)\)等于\(0\)，左右两边同乘\(\boldsymbol{\Sigma}^{-1}\)，得\(\hat{\boldsymbol{\mu}}=\sum_{i=0}^n x_i=\bar{x}\)，令式\((8)\)等于\(\boldsymbol{0}\)，并把\(\hat{\boldsymbol{\mu}}\)带入式\((8)\)，得\(\boldsymbol{\hat{\Sigma}} =\frac{1}{n} \sum_{i=1}^n (\boldsymbol{x}_i-\boldsymbol{\bar{x}})(\boldsymbol{x}_i-\boldsymbol{\bar{x}})^T=\frac{1}{n} \sum_{i=1}^n (x_i-\hat{\boldsymbol{\mu}})(x_i-\hat{\boldsymbol{\mu}})^T\)。综上，多元正态分布的极大似然估计值\(\hat{\boldsymbol{\mu}}\)为样本的矩阵，而\(\boldsymbol{\hat{\Sigma}}\)为样本的协方差矩阵。</p>
 
           
           
@@ -877,8 +948,8 @@
           
         
       <script>
-        var oid = "views_learn\\公式渲染\\index.md"
-        var oid_likes = "likes_learn\\公式渲染\\index.md"
+        var oid = "views_learn\\多元正态分布\\index.md"
+        var oid_likes = "likes_learn\\多元正态分布\\index.md"
       </script>
       
       
@@ -898,40 +969,18 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/learn/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >多元正态分布详解</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2023-10-14T17:33:09&#43;08:00">2023-10-14</time>
-                  
-                </span>
-              </span>
-            </a>
-          
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/learn/computer-network/ssl-tls/">
+            <a class="flex text-right group ml-3" href="/learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >计算机网络中的加密传输（一）</span
+                  >公式渲染</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-10-13T18:56:09&#43;08:00">2024-10-13</time>
+                    <time datetime="2023-10-17T13:06:09&#43;08:00">2023-10-17</time>
                   
                 </span>
               </span>
