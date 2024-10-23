@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
   data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
@@ -68,14 +68,16 @@
   <meta property="og:url" content="http://localhost:1313/life/">
   <meta property="og:site_name" content="Yuki">
   <meta property="og:title" content="这是Yuki，欢迎来到我的生活小站!">
-  <meta property="og:description" content="一个强大、轻量级的 Hugo 主题。">
+  <meta property="og:description" content="欢迎来到我的生活小站！">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="website">
+    <meta property="og:image" content="http://localhost:1313/life/featured.jpg">
 
   
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/life/featured.jpg">
   <meta name="twitter:title" content="这是Yuki，欢迎来到我的生活小站!">
-  <meta name="twitter:description" content="一个强大、轻量级的 Hugo 主题。">
+  <meta name="twitter:description" content="欢迎来到我的生活小站！">
 
   
   
@@ -86,7 +88,7 @@
   
   
   
-  <link href="https://twitter.com/burufugu" rel="me" />
+  <link href="email/" rel="me" />
   
   
   <link href="https://github.com/ZhihengNing" rel="me" />
@@ -152,7 +154,7 @@
             <span class="sr-only">Yuki</span>
 
             
-            <img src="/img/blowfish_logo.png" width="1000" height="1000"
+            <img src="/img/blowfish_logo_transparent.png" width="1000" height="1000"
                 class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="Yuki" />
             
 
@@ -468,6 +470,38 @@
       
 
 
+
+
+
+
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/life/featured_hu869345489968792237.jpg);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
  <header>
   
   <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">这是Yuki，欢迎来到我的生活小站!</h1>
@@ -539,7 +573,13 @@
     
 
   
-      
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   

@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/learn/computer-network/github-auth/</loc>
     <lastmod>2024-10-15T21:36:09+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/learn/computer-network/github-auth/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-10-15T21:36:09+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -45,14 +45,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/</loc>
-    <lastmod>2023-10-17T13:06:09+08:00</lastmod>
+    <loc>http://localhost:1313/learn/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/</loc>
+    <lastmod>2023-10-14T17:33:09+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/learn/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/</loc>
-    <lastmod>2023-10-14T17:33:09+08:00</lastmod>
+    <loc>http://localhost:1313/email/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

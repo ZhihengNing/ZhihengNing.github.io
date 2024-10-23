@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
   data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>计算机网络中的加密传输（二） &middot; Yuki</title>
-  <meta name="title" content="计算机网络中的加密传输（二） &middot; Yuki" />
+  <title>JSON Web Token学习 &middot; Yuki</title>
+  <meta name="title" content="JSON Web Token学习 &middot; Yuki" />
   
-  <meta name="description" content="一个强大、轻量级的 Hugo 主题。" />
-  
+  <meta name="description" content="JWT加密原理及过程的学习笔记" />
+  <meta name="keywords" content="计算机网络, " />
   
   
   <link rel="canonical" href="http://localhost:1313/learn/computer-network/jwt/" />
@@ -65,20 +65,23 @@
   
   <meta property="og:url" content="http://localhost:1313/learn/computer-network/jwt/">
   <meta property="og:site_name" content="Yuki">
-  <meta property="og:title" content="计算机网络中的加密传输（二）">
-  <meta property="og:description" content="一个强大、轻量级的 Hugo 主题。">
+  <meta property="og:title" content="JSON Web Token学习">
+  <meta property="og:description" content="JWT加密原理及过程的学习笔记">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="learn">
     <meta property="article:published_time" content="2024-10-14T01:54:09+08:00">
     <meta property="article:modified_time" content="2024-10-14T01:54:09+08:00">
+    <meta property="article:tag" content="计算机网络">
     <meta property="og:image" content="http://localhost:1313/learn/computer-network/jwt/featured.jpg">
+      <meta property="og:see_also" content="http://localhost:1313/learn/computer-network/github-auth/">
+      <meta property="og:see_also" content="http://localhost:1313/learn/computer-network/ssl-tls/">
 
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/learn/computer-network/jwt/featured.jpg">
-  <meta name="twitter:title" content="计算机网络中的加密传输（二）">
-  <meta name="twitter:description" content="一个强大、轻量级的 Hugo 主题。">
+  <meta name="twitter:title" content="JSON Web Token学习">
+  <meta name="twitter:description" content="JWT加密原理及过程的学习笔记">
 
   
   <script type="application/ld+json">
@@ -86,10 +89,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "学习",
-    "name": "计算机网络中的加密传输（二）",
-    "headline": "计算机网络中的加密传输（二）",
+    "name": "JSON Web Token学习",
+    "headline": "JSON Web Token学习",
     
-    
+    "abstract": "JWT加密原理及过程的学习笔记",
     "inLanguage": "zh-cn",
     "url" : "http:\/\/localhost:1313\/learn\/computer-network\/jwt\/",
     "author" : {
@@ -102,10 +105,10 @@
     
     "dateModified": "2024-10-14T01:54:09\u002b08:00",
     
-    
+    "keywords": ["计算机网络"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "80"
+    "wordCount": "1496"
   }]
   </script>
 
@@ -116,7 +119,7 @@
   
   
   
-  <link href="https://twitter.com/burufugu" rel="me" />
+  <link href="email/" rel="me" />
   
   
   <link href="https://github.com/ZhihengNing" rel="me" />
@@ -315,7 +318,7 @@
             <span class="sr-only">Yuki</span>
 
             
-            <img src="/img/blowfish_logo.png" width="1000" height="1000"
+            <img src="/img/blowfish_logo_transparent.png" width="1000" height="1000"
                 class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="Yuki" />
             
 
@@ -633,11 +636,46 @@
 
 <article>
   
+  
+  
+  
+  
+  
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/learn/computer-network/jwt/featured_hu11388951026049237248.jpg);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
 
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      计算机网络中的加密传输（二）
+      JSON Web Token学习
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -682,7 +720,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-14T01:54:09&#43;08:00">2024-10-14</time><span class="px-2 text-primary-500">&middot;</span><span>80 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="2024-10-14T01:54:09&#43;08:00">2024-10-14</time><span class="px-2 text-primary-500">&middot;</span><span>1496 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
   
 
   
@@ -692,6 +730,32 @@
 
 
 
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机网络
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
 
 
 
@@ -743,14 +807,15 @@
       
         <a
           class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
-          href="https://twitter.com/burufugu"
+          href="email/"
           target="_blank"
-          aria-label="X-Twitter"
+          aria-label="Email"
           rel="me noopener noreferrer"
           ><span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
   </span>
 
 </span></a
@@ -795,11 +860,172 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#jwt结构">JWT结构</a>
+      <ul>
+        <li><a href="#表头">表头</a></li>
+        <li><a href="#有效载荷">有效载荷</a></li>
+        <li><a href="#签名">签名</a></li>
+      </ul>
+    </li>
+    <li><a href="#如何使用">如何使用</a></li>
+    <li><a href="#jwt与ssltls">JWT与SSL/TLS</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#jwt结构">JWT结构</a>
+      <ul>
+        <li><a href="#表头">表头</a></li>
+        <li><a href="#有效载荷">有效载荷</a></li>
+        <li><a href="#签名">签名</a></li>
+      </ul>
+    </li>
+    <li><a href="#如何使用">如何使用</a></li>
+    <li><a href="#jwt与ssltls">JWT与SSL/TLS</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+           
+            $(e).removeClass('active').siblings('ul').hide();
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+         
+          $toc.find('a').parent('li').find('ul').hide();
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
         
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5"  open >
+    
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        计算机网络中的加密传输 - 这篇文章属于一个选集。
+    </summary>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/learn/computer-network/ssl-tls/">
+            § 1: 加密传输协议SSL/TLS
+        </a>
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        § 2: 本文
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/learn/computer-network/github-auth/">
+            § 3: Github中SSH连接方式及原理
+        </a>
+    </div>
+    
+    
+
+
+</details>
+
 
 
         <div class="article-content max-w-prose mb-20">
@@ -807,16 +1033,16 @@
 
 
 
-<h1 class="relative group">JWT加密原理 
-    <div id="jwt%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86" class="anchor"></div>
+<h2 class="relative group">前言 
+    <div id="%E5%89%8D%E8%A8%80" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#jwt%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%89%8D%E8%A8%80" aria-label="锚点">#</a>
     </span>        
     
-</h1>
+</h2>
 <p>JWT（<a href="https://jwt.io/" target="_blank">JSON Web Token</a>）是基于JSON实现Token的方式。JWT是基于开放标准（RFC 7519）实现的<strong>紧凑</strong>且<strong>自包含</strong>的，用于在各方以JSON形式传输的信息。该信息可以被信任与验证，因为它也是一种数字签名。JWT可以使用HMAC算法或RSA、ESDSA的公钥\私钥进行签名。JWT常常被应用于以下两个场景：</p>
 <ul>
 <li>授权：这是JWT最常用的场景，用户登陆后可获取JWT，并在后续的每个请求携带他，这将允许用户访问该令牌允许的路由、服务、资源。JWT被广泛应用于单点登录中，具有开销小、轻松跨域使用的特点。</li>
@@ -975,6 +1201,43 @@
         
 
         
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+    
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        计算机网络中的加密传输 - 这篇文章属于一个选集。
+    </summary>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/learn/computer-network/ssl-tls/">
+            § 1: 加密传输协议SSL/TLS
+        </a>
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        § 2: 本文
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/learn/computer-network/github-auth/">
+            § 3: Github中SSH连接方式及原理
+        </a>
+    </div>
+    
+    
+
+
+</details>
+
         
 
           
@@ -1021,7 +1284,7 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >计算机网络中的加密传输（一）</span
+                  >加密传输协议SSL/TLS</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
@@ -1038,7 +1301,7 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >计算机网络中的加密传输（三）</span
+                  >Github中SSH连接方式及原理</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   

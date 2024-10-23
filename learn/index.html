@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
   data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
@@ -71,9 +71,11 @@
   <meta property="og:description" content="这是往主页中添加内容的例子。">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="website">
+    <meta property="og:image" content="http://localhost:1313/learn/featured.jpg">
 
   
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/learn/featured.jpg">
   <meta name="twitter:title" content="学习">
   <meta name="twitter:description" content="这是往主页中添加内容的例子。">
 
@@ -86,7 +88,7 @@
   
   
   
-  <link href="https://twitter.com/burufugu" rel="me" />
+  <link href="email/" rel="me" />
   
   
   <link href="https://github.com/ZhihengNing" rel="me" />
@@ -152,7 +154,7 @@
             <span class="sr-only">Yuki</span>
 
             
-            <img src="/img/blowfish_logo.png" width="1000" height="1000"
+            <img src="/img/blowfish_logo_transparent.png" width="1000" height="1000"
                 class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="Yuki" />
             
 
@@ -468,6 +470,38 @@
       
 
 
+
+
+
+
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/learn/featured_hu869345489968792237.jpg);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
  <header>
   
   <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">学习</h1>
@@ -579,7 +613,7 @@
       <div class="items-center text-left text-xl font-semibold">
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/learn/computer-network/github-auth/">计算机网络中的加密传输（三）</div>
+          href="/learn/computer-network/github-auth/">Github中SSH连接方式及原理</div>
         
         
         
@@ -624,7 +658,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-15T21:36:09&#43;08:00">2024-10-15</time><span class="px-2 text-primary-500">&middot;</span><span>10 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="2024-10-15T21:36:09&#43;08:00">2024-10-15</time><span class="px-2 text-primary-500">&middot;</span><span>140 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
   
 
   
@@ -635,9 +669,39 @@
 
 
 
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机网络
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
 
 
 
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Github SSH连接方式与原理的解读（待定）
       </div>
       
     </div>
@@ -676,7 +740,7 @@
       <div class="items-center text-left text-xl font-semibold">
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/learn/computer-network/jwt/">计算机网络中的加密传输（二）</div>
+          href="/learn/computer-network/jwt/">JSON Web Token学习</div>
         
         
         
@@ -721,7 +785,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-14T01:54:09&#43;08:00">2024-10-14</time><span class="px-2 text-primary-500">&middot;</span><span>80 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="2024-10-14T01:54:09&#43;08:00">2024-10-14</time><span class="px-2 text-primary-500">&middot;</span><span>1496 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
   
 
   
@@ -732,9 +796,39 @@
 
 
 
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机网络
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
 
 
 
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        JWT加密原理及过程的学习笔记
       </div>
       
     </div>
@@ -773,7 +867,7 @@
       <div class="items-center text-left text-xl font-semibold">
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/learn/computer-network/ssl-tls/">计算机网络中的加密传输（一）</div>
+          href="/learn/computer-network/ssl-tls/">加密传输协议SSL/TLS</div>
         
         
         
@@ -818,7 +912,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-13T18:56:09&#43;08:00">2024-10-13</time><span class="px-2 text-primary-500">&middot;</span><span>50 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="2024-10-13T18:56:09&#43;08:00">2024-10-13</time><span class="px-2 text-primary-500">&middot;</span><span>3965 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">8 分钟</span>
   
 
   
@@ -829,9 +923,39 @@
 
 
 
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机网络
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
 
 
 
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        SSL/TLS加密传输协议学习笔记
       </div>
       
     </div>
@@ -844,103 +968,6 @@
           2023
         </h2>
         
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a class="flex flex-wrap article " href="/learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/">
-    
-        
-        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/img/featured.svg);"></div>
-        
-      <div class=" mt-3 md:mt-0">
-      <div class="items-center text-left text-xl font-semibold">
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/learn/%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/">公式渲染</div>
-        
-        
-        
-      </div>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2023-10-17T13:06:09&#43;08:00">2023-10-17</time><span class="px-2 text-primary-500">&middot;</span><span>39 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-
-
-
-      </div>
-      
-    </div>
-  </a>
-
         
         
 
@@ -1019,7 +1046,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-14T17:33:09&#43;08:00">2023-10-14</time><span class="px-2 text-primary-500">&middot;</span><span>197 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="2023-10-14T17:33:09&#43;08:00">2023-10-14</time><span class="px-2 text-primary-500">&middot;</span><span>1348 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
   
 
   
@@ -1030,9 +1057,47 @@
 
 
 
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%95%B0%E5%AD%A6/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    数学
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    机器学习
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
 
 
 
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        模式识别第一次作业——多元正态分布的推导与结果
       </div>
       
     </div>
@@ -1050,7 +1115,13 @@
     
 
   
-      
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   
