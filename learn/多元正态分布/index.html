@@ -8,10 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>多元正态分布详解 &middot; Yuki</title>
-  <meta name="title" content="多元正态分布详解 &middot; Yuki" />
+  <title>多元正态分布极大似然估计 &middot; Yuki</title>
+  <meta name="title" content="多元正态分布极大似然估计 &middot; Yuki" />
   
-  <meta name="description" content="模式识别第一次作业——多元正态分布的推导与结果" />
+  <meta name="description" content="模式识别第一次作业——多元正态分布的极大似然估计" />
   <meta name="keywords" content="数学, 机器学习, " />
   
   
@@ -65,8 +65,8 @@
   
   <meta property="og:url" content="http://localhost:1313/learn/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/">
   <meta property="og:site_name" content="Yuki">
-  <meta property="og:title" content="多元正态分布详解">
-  <meta property="og:description" content="模式识别第一次作业——多元正态分布的推导与结果">
+  <meta property="og:title" content="多元正态分布极大似然估计">
+  <meta property="og:description" content="模式识别第一次作业——多元正态分布的极大似然估计">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="learn">
@@ -79,8 +79,8 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/learn/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/featured.jpg">
-  <meta name="twitter:title" content="多元正态分布详解">
-  <meta name="twitter:description" content="模式识别第一次作业——多元正态分布的推导与结果">
+  <meta name="twitter:title" content="多元正态分布极大似然估计">
+  <meta name="twitter:description" content="模式识别第一次作业——多元正态分布的极大似然估计">
 
   
   <script type="application/ld+json">
@@ -88,10 +88,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "学习",
-    "name": "多元正态分布详解",
-    "headline": "多元正态分布详解",
+    "name": "多元正态分布极大似然估计",
+    "headline": "多元正态分布极大似然估计",
     
-    "abstract": "模式识别第一次作业——多元正态分布的推导与结果",
+    "abstract": "模式识别第一次作业——多元正态分布的极大似然估计",
     "inLanguage": "zh-cn",
     "url" : "http:\/\/localhost:1313\/learn\/%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83\/",
     "author" : {
@@ -107,7 +107,7 @@
     "keywords": ["数学","机器学习"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1348"
+    "wordCount": "1334"
   }]
   </script>
 
@@ -674,7 +674,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      多元正态分布详解
+      多元正态分布极大似然估计
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -719,7 +719,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-14T17:33:09&#43;08:00">2023-10-14</time><span class="px-2 text-primary-500">&middot;</span><span>1348 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
+  <time datetime="2023-10-14T17:33:09&#43;08:00">2023-10-14</time><span class="px-2 text-primary-500">&middot;</span><span>1334 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
   
 
   
@@ -987,18 +987,6 @@
         <div class="article-content max-w-prose mb-20">
           
 
-
-
-<h1 class="relative group">多元正态分布的极大似然估计 
-    <div id="%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%A4%9A%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1" aria-label="锚点">#</a>
-    </span>        
-    
-</h1>
 
 
 <h2 class="relative group">前言 
